@@ -73,4 +73,12 @@ class UserTest < ActiveSupport::TestCase
 		assert_not @user.valid?
 	end
 
+	test "associated test should be deleted" do
+		@user.save
+		@user.recipes.create!(name: "testing destroy", description: "testing destroy function")
+		assert_difference 'Recipe.count' , -1 do
+			@user.destroy
+		end
+	end
+
 end

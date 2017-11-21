@@ -4,6 +4,10 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
+	def index
+		@users = User.paginate(page: params[:page], per_page: 5)
+	end
+
 	def create
 		@user = User.new(user_params)
 		if @user.save
@@ -16,6 +20,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		@user_recipes = @user.recipes.paginate(page: params[:page], per_page: 5)
 	end
 
 	def edit
@@ -30,6 +35,13 @@ class UsersController < ApplicationController
 		else
 			render 'edit'
 		end
+	end
+
+	def destroy
+		@user = User.find(params[:id])
+		@user.destroy
+		flash[:danger] = "User and all associated recipes have been deleted"
+		redirect_to users_path
 	end
 
 	private
