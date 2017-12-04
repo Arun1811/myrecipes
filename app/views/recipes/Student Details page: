@@ -1,0 +1,67 @@
+Student Details page:
+
+1. Wall post description and url are not visible
+
+
+Student Edit page:
+
+1. Change Student name & Mobile number field type from text_area to text_filed type
+2. All students link not working, Goes to oops page
+3. If no changes in edit page when i click the submit button, the payment section value updated the default selected one month.
+3. Change the image upload button name from Select image to Change image. When image exists, otherwise show select image
+
+
+
+Student Edit page:
+1. All trainers link not working, Goes to oops page.
+
+Slot details page
+
+1. Select all student check box not working and same as performance check box
+2. Without any changes and then come back from detail page to previous page. Show notification flash "Slots were successfully updated" message
+3. If you delete the slots. Show notification, message flash correctly, but available slots are not visible
+
+
+Payment Section:
+
+1. Paid record was not visible.
+
+
+Wall post
+
+1. Edit page preselected image is not updated
+2. Updated Show page goes to plain html page view.
+
+Events:
+Create page:
+1. Change Venue filed type from text_filed to text_area type
+2. Validation Error message -- Not shown which filed is empty
+3. Change the image upload button name from Select image to Change image. When image exists, otherwise show select image
+4. All events link not working, Goes to oops page
+
+
+Message Centre:
+List page:
+1. Change date time format
+
+Create page:
+1. Validation is not available
+
+Edit page:
+2. All message link not working, Goes to oops page.
+
+
+
+Article:
+
+Create page:
+1. Change the image upload button name from Select image to Change image. When image exists, otherwise show select image
+2. Defaultly shown error message above in the upload image filed.
+3. If you uploaded the large image, show error in end of the Centre name filed.
+
+
+Remove Description Field part area like shown in normal text, bold, upload text image, etc,, for all pages
+
+
+
+

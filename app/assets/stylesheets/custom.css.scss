@@ -84,3 +84,20 @@ $navbar-default-bg: black;
 	font-weight: bold;
 	font-size: 1.25em;
 }
+
+.footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #aeeaea;
+	color: #777;
+	padding-left: 10 px;
+	padding-right: 10 px;
+}
+
+.footer a {
+	color: #555;
+}
+
+.input_checkbox input {
+	width: auto !important;
+}
