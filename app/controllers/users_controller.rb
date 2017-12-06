@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			session[:user_id] = @user.id
+			cookies.signed[:user_id] = @user.id
 			flash[:success] = "Welcome #{@user.username} to MyRecipes App!"
 			redirect_to user_path(@user)
 		else
@@ -25,6 +26,10 @@ class UsersController < ApplicationController
 
 	def show
 		@user_recipes = @user.recipes.paginate(page: params[:page], per_page: 5)
+	end
+
+	def assign
+		
 	end
 
 	def edit

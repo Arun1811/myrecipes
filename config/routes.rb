@@ -7,12 +7,18 @@ Rails.application.routes.draw do
 	end
 	
 	get '/signup', to: 'users#new'
-	resources :users, except: [:new]
+	get '/admincontrol', to: 'users#assign'
+	resources :users, except: [:new, :assign]
 
 	get '/login', to: 'sessions#new'
 	post '/login', to: 'sessions#create'
 	delete '/logout', to: 'sessions#destroy'
 
 	resources :ingredients, except: [:destroy]
+
+	mount ActionCable.server => '/cable'
+	get '/chat', to: 'chatrooms#show'
+
+	resources :messages, only: [:create]
 
 end
